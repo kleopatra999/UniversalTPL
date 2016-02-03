@@ -12,11 +12,14 @@ composer require universaltpl/universaltpl
 ```
 
 ## Example
+
+### Twig full PHP example
 ```php
 <?php
-
+// Require Composer's autoloader
 require __DIR__ . '/vendor/autoload.php';
 
+// Create configuration
 $configuration = new \UniversalTpl\Configuration(
 	\UniversalTpl\Configuration::TWIG,
 	[
@@ -27,8 +30,16 @@ $configuration = new \UniversalTpl\Configuration(
 	]
 );
 
+// Create wrapper class
 $wrapper  = new \UniversalTpl\Wrapper($configuration);
-echo $wrapper->render('index.twig', ['name' => 'david']);
+
+// Render template
+echo $wrapper->render('index', ['name' => 'david']);
+```
+
+### Twig template example
+```tpl
+hello {{ name }}
 ```
 
 ## Rendering engine
@@ -38,11 +49,8 @@ echo $wrapper->render('index.twig', ['name' => 'david']);
 $configuration = new \UniversalTpl\Configuration(
 	\UniversalTpl\Configuration::BLADE,
 	[
-	
 	]
 );
-$wrapper  = new \UniversalTpl\Wrapper($configuration);
-echo $wrapper->render('index', ['name' => 'david']);
 ```
 
 ### Dwoo
@@ -50,11 +58,8 @@ echo $wrapper->render('index', ['name' => 'david']);
 $configuration = new \UniversalTpl\Configuration(
 	\UniversalTpl\Configuration::DWOO,
 	[
-	
 	]
 );
-$wrapper  = new \UniversalTpl\Wrapper($configuration);
-echo $wrapper->render('index.tpl', ['name' => 'david']);
 ```
 
 ### Mustache
@@ -62,11 +67,8 @@ echo $wrapper->render('index.tpl', ['name' => 'david']);
 $configuration = new \UniversalTpl\Configuration(
 	\UniversalTpl\Configuration::MUSTACHE,
 	[
-	
 	]
 );
-$wrapper  = new \UniversalTpl\Wrapper($configuration);
-echo $wrapper->render('index', ['name' => 'david']);
 ```
 
 ### Plates
@@ -74,11 +76,8 @@ echo $wrapper->render('index', ['name' => 'david']);
 $configuration = new \UniversalTpl\Configuration(
 	\UniversalTpl\Configuration::PLATES,
 	[
-	
 	]
 );
-$wrapper  = new \UniversalTpl\Wrapper($configuration);
-echo $wrapper->render('index', ['name' => 'david']);
 ```
 
 ### Smarty
@@ -86,11 +85,8 @@ echo $wrapper->render('index', ['name' => 'david']);
 $configuration = new \UniversalTpl\Configuration(
 	\UniversalTpl\Configuration::SMARTY,
 	[
-	
 	]
 );
-$wrapper  = new \UniversalTpl\Wrapper($configuration);
-echo $wrapper->render('index.tpl', ['name' => 'david']);
 ```
 
 ### Twig
@@ -98,11 +94,8 @@ echo $wrapper->render('index.tpl', ['name' => 'david']);
 $configuration = new \UniversalTpl\Configuration(
 	\UniversalTpl\Configuration::TWIG,
 	[
-	
 	]
 );
-$wrapper  = new \UniversalTpl\Wrapper($configuration);
-echo $wrapper->render('index.twig', ['name' => 'david']);
 ```
 
 ## About
