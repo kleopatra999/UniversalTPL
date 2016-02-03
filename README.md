@@ -41,6 +41,8 @@ $configuration = new \UniversalTpl\Configuration(
 	
 	]
 );
+$wrapper  = new \UniversalTpl\Wrapper($configuration);
+echo $wrapper->render('index', ['name' => 'david']);
 ```
 
 ### Dwoo
@@ -51,6 +53,8 @@ $configuration = new \UniversalTpl\Configuration(
 	
 	]
 );
+$wrapper  = new \UniversalTpl\Wrapper($configuration);
+echo $wrapper->render('index.tpl', ['name' => 'david']);
 ```
 
 ### Mustache
@@ -61,6 +65,8 @@ $configuration = new \UniversalTpl\Configuration(
 	
 	]
 );
+$wrapper  = new \UniversalTpl\Wrapper($configuration);
+echo $wrapper->render('index', ['name' => 'david']);
 ```
 
 ### Plates
@@ -71,6 +77,8 @@ $configuration = new \UniversalTpl\Configuration(
 	
 	]
 );
+$wrapper  = new \UniversalTpl\Wrapper($configuration);
+echo $wrapper->render('index', ['name' => 'david']);
 ```
 
 ### Smarty
@@ -81,6 +89,8 @@ $configuration = new \UniversalTpl\Configuration(
 	
 	]
 );
+$wrapper  = new \UniversalTpl\Wrapper($configuration);
+echo $wrapper->render('index.tpl', ['name' => 'david']);
 ```
 
 ### Twig
@@ -91,6 +101,8 @@ $configuration = new \UniversalTpl\Configuration(
 	
 	]
 );
+$wrapper  = new \UniversalTpl\Wrapper($configuration);
+echo $wrapper->render('index.twig', ['name' => 'david']);
 ```
 
 ## About
