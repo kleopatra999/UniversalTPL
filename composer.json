@@ -13,7 +13,9 @@
 		}
 	},
 	"require": {
-		"php": ">=7",
+		"php": ">=7"
+	},
+	"require-dev": {
 		"dwoo/dwoo": "dev-beta",
 		"twig/twig": "^1.24",
 		"league/plates": "^3.1",
