@@ -16,6 +16,8 @@ class Dwoo extends AbstractBridge {
 			throw new \Exception('Dwoo is not installed');
 		}
 
+		$this->setFileExtension('.tpl');
+
 		$core = new Core();
 		$core->setTemplateDir($parameters['template_dir']);
 		$core->setCompileDir($parameters['compile_dir']);
@@ -30,6 +32,6 @@ class Dwoo extends AbstractBridge {
 	 * @return string
 	 */
 	public function render($file, array $vars): string {
-		return $this->getEngine()->get($file, $vars);
+		return $this->getEngine()->get($file . $this->getFileExtension(), $vars);
 	}
 }

@@ -18,14 +18,4 @@ class Blade extends AbstractBridge {
 		$blade = new BladeInstance($parameters['template_dir'], $parameters['compile_dir']);
 		$this->setEngine($blade);
 	}
-
-	/**
-	 * Render the template.
-	 * @param string $file
-	 * @param array  $vars
-	 * @return string
-	 */
-	public function render($file, array $vars): string {
-		return $this->getEngine()->render($file, $vars);
-	}
 }

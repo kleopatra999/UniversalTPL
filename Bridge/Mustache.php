@@ -17,14 +17,4 @@ class Mustache extends AbstractBridge {
 		$mustache->setLoader(new \Mustache_Loader_FilesystemLoader($parameters['template_dir']));
 		$this->setEngine($mustache);
 	}
-
-	/**
-	 * Render the template.
-	 * @param string $file
-	 * @param array  $vars
-	 * @return string
-	 */
-	public function render($file, array $vars): string {
-		return $this->getEngine()->render($file, $vars);
-	}
 }

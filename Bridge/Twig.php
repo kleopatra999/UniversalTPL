@@ -13,16 +13,7 @@ class Twig extends AbstractBridge {
 			throw new \Exception('Twig engine is not installed');
 		}
 
+		$this->setFileExtension('.twig');
 		$this->setEngine(new \Twig_Environment(new \Twig_Loader_Filesystem($parameters['template_dir'])));
-	}
-
-	/**
-	 * Render the template.
-	 * @param string $file
-	 * @param array  $vars
-	 * @return string
-	 */
-	public function render($file, array $vars): string {
-		return $this->getEngine()->render($file, $vars);
 	}
 }

@@ -19,14 +19,4 @@ class Plates extends AbstractBridge {
 		$engine->setDirectory($parameters['template_dir']);
 		$this->setEngine($engine);
 	}
-
-	/**
-	 * Render the template.
-	 * @param string $file
-	 * @param array  $vars
-	 * @return string
-	 */
-	public function render($file, array $vars): string {
-		return $this->getEngine()->render($file, $vars);
-	}
 }

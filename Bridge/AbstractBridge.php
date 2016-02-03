@@ -5,6 +5,7 @@ abstract class AbstractBridge {
 
 	/** Properties */
 	protected $engine;
+	protected $fileExtension;
 
 	/**
 	 * Get engine
@@ -26,11 +27,41 @@ abstract class AbstractBridge {
 	}
 
 	/**
+	 * Get fileExtension
+	 * @return mixed
+	 */
+	public function getFileExtension() {
+		return $this->fileExtension;
+	}
+
+	/**
+	 * Set fileExtension
+	 * @param mixed $fileExtension
+	 * @return Twig
+	 */
+	public function setFileExtension($fileExtension) {
+		$this->fileExtension = $fileExtension;
+
+		return $this;
+	}
+
+	/**
+	 * Bridge constructor.
+	 * @param array $parameters
+	 */
+	abstract public function __construct(array $parameters);
+
+	/**
 	 * Render the template.
 	 * @param string $file
 	 * @param array  $vars
 	 * @return string
 	 */
-	abstract public function render($file, array $vars): string;
+	public function render($file, array $vars): string {
+		if (null !== $this->getFileExtension()) {
+			$file = $file . $this->getFileExtension();
+		}
 
+		return $this->getEngine()->render($file, $vars);
+	}
 }

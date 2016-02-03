@@ -13,6 +13,8 @@ class Smarty extends AbstractBridge {
 			throw new \Exception('Smarty is not installed');
 		}
 
+		$this->setFileExtension('.tpl');
+
 		$smarty = new \Smarty();
 		$smarty->setTemplateDir($parameters['template_dir']);
 		$smarty->setCompileDir($parameters['compile_dir']);
@@ -32,6 +34,6 @@ class Smarty extends AbstractBridge {
 			$this->getEngine()->assign($key, $value);
 		}
 
-		return $this->getEngine()->fetch($file);
+		return $this->getEngine()->fetch($file . $this->getFileExtension());
 	}
 }
