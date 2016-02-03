@@ -1,0 +1,24 @@
+{
+	"name": "universaltpl/universaltpl",
+	"type": "library",
+	"authors": [
+		{
+			"name": "David Sanchez",
+			"email": "david38sanchez@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"UniversalTpl\\": "./"
+		}
+	},
+	"require": {
+		"php": ">=7",
+		"dwoo/dwoo": "dev-beta",
+		"twig/twig": "^1.24",
+		"league/plates": "^3.1",
+		"smarty/smarty": "^3.1",
+		"duncan3dc/blade": "^3.0",
+		"mustache/mustache": "^2.9"
+	}
+}
