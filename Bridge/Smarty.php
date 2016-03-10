@@ -29,7 +29,7 @@ class Smarty extends AbstractBridge {
 	 * @param array  $vars
 	 * @return string
 	 */
-	public function render($file, array $vars): string {
+	public function render(string $file, array $vars): string {
 		foreach ($vars as $key => $value) {
 			$this->getEngine()->assign($key, $value);
 		}

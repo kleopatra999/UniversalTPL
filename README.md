@@ -20,8 +20,8 @@ composer require universaltpl/universaltpl
 require __DIR__ . '/vendor/autoload.php';
 
 // Create configuration
-$configuration = new \UniversalTpl\Configuration(
-	\UniversalTpl\Configuration::TWIG,
+$configuration = new \FlexyProject\UniversalTpl\Configuration(
+	\FlexyProject\UniversalTpl\Configuration::TWIG,
 	[
 		'template_dir' => __DIR__ . '/tests',
 		'compile_dir'  => __DIR__ . '/templates_c',
@@ -31,7 +31,7 @@ $configuration = new \UniversalTpl\Configuration(
 );
 
 // Create wrapper class
-$wrapper  = new \UniversalTpl\Wrapper($configuration);
+$wrapper  = new \FlexyProject\UniversalTpl\Wrapper($configuration);
 
 // Render template
 echo $wrapper->render('index', ['name' => 'david']);
@@ -46,8 +46,8 @@ hello {{ name }}
 
 ### Blade
 ```php
-$configuration = new \UniversalTpl\Configuration(
-	\UniversalTpl\Configuration::BLADE,
+$configuration = new \FlexyProject\UniversalTpl\Configuration(
+	\FlexyProject\UniversalTpl\Configuration::BLADE,
 	[
 	]
 );
@@ -55,8 +55,8 @@ $configuration = new \UniversalTpl\Configuration(
 
 ### Dwoo
 ```php
-$configuration = new \UniversalTpl\Configuration(
-	\UniversalTpl\Configuration::DWOO,
+$configuration = new \FlexyProject\UniversalTpl\Configuration(
+	\FlexyProject\UniversalTpl\Configuration::DWOO,
 	[
 	]
 );
@@ -64,8 +64,8 @@ $configuration = new \UniversalTpl\Configuration(
 
 ### Mustache
 ```php
-$configuration = new \UniversalTpl\Configuration(
-	\UniversalTpl\Configuration::MUSTACHE,
+$configuration = new \FlexyProject\UniversalTpl\Configuration(
+	\FlexyProject\UniversalTpl\Configuration::MUSTACHE,
 	[
 	]
 );
@@ -73,8 +73,8 @@ $configuration = new \UniversalTpl\Configuration(
 
 ### Plates
 ```php
-$configuration = new \UniversalTpl\Configuration(
-	\UniversalTpl\Configuration::PLATES,
+$configuration = new \FlexyProject\UniversalTpl\Configuration(
+	\FlexyProject\UniversalTpl\Configuration::PLATES,
 	[
 	]
 );
@@ -82,8 +82,8 @@ $configuration = new \UniversalTpl\Configuration(
 
 ### Smarty
 ```php
-$configuration = new \UniversalTpl\Configuration(
-	\UniversalTpl\Configuration::SMARTY,
+$configuration = new \FlexyProject\UniversalTpl\Configuration(
+	\FlexyProject\UniversalTpl\Configuration::SMARTY,
 	[
 	]
 );
@@ -91,8 +91,8 @@ $configuration = new \UniversalTpl\Configuration(
 
 ### Twig
 ```php
-$configuration = new \UniversalTpl\Configuration(
-	\UniversalTpl\Configuration::TWIG,
+$configuration = new \FlexyProject\UniversalTpl\Configuration(
+	\FlexyProject\UniversalTpl\Configuration::TWIG,
 	[
 	]
 );

@@ -26,7 +26,7 @@ class Wrapper {
 	 * @param array  $vars
 	 * @return string
 	 */
-	public function render($file, array $vars = []): string {
+	public function render(string $file, array $vars = []): string {
 		return $this->getBride()->render($file, $vars);
 	}
 

@@ -20,7 +20,7 @@ class Configuration {
 	 * @param string $engine
 	 * @param array  $parameters
 	 */
-	public function __construct($engine, array $parameters) {
+	public function __construct(string $engine, array $parameters) {
 		$this->engine = $engine;
 		$this->setParameters($parameters);
 	}
@@ -57,7 +57,7 @@ class Configuration {
 	 * @param string $name
 	 * @return null|string
 	 */
-	public function getParameter($name) {
+	public function getParameter(string $name) {
 		return $this->getParameters()[$name] ?? null;
 	}
 

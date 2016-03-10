@@ -31,7 +31,7 @@ class Dwoo extends AbstractBridge {
 	 * @param array  $vars
 	 * @return string
 	 */
-	public function render($file, array $vars): string {
+	public function render(string $file, array $vars): string {
 		return $this->getEngine()->get($file . $this->getFileExtension(), $vars);
 	}
 }
