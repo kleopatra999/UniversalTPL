@@ -1,5 +1,5 @@
 {
-    "name": "universaltpl/universaltpl",
+    "name": "flexyproject/universaltpl",
     "type": "library",
     "authors": [
         {
@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "UniversalTpl\\": "./"
+            "FlexyProject\\UniversalTpl\\": "./"
         }
     },
     "require": {

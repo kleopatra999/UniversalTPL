@@ -1,5 +1,5 @@
 <?php
-namespace UniversalTpl\Bridge;
+namespace FlexyProject\UniversalTpl\Bridge;
 
 use Dwoo\Core;
 

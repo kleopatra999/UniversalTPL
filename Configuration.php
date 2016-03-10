@@ -1,5 +1,5 @@
 <?php
-namespace UniversalTpl;
+namespace FlexyProject\UniversalTpl;
 
 class Configuration {
 

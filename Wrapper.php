@@ -1,7 +1,7 @@
 <?php
-namespace UniversalTpl;
+namespace FlexyProject\UniversalTpl;
 
-use UniversalTpl\Bridge\AbstractBridge;
+use FlexyProject\UniversalTpl\Bridge\AbstractBridge;
 
 class Wrapper {
 
@@ -16,7 +16,7 @@ class Wrapper {
 	public function __construct(Configuration $configuration) {
 		$this->configuration = $configuration;
 
-		$class = sprintf('\\UniversalTpl\\Bridge\\%s', $configuration->getEngine());
+		$class = sprintf('\\FlexyProject\\UniversalTpl\\Bridge\\%s', $configuration->getEngine());
 		$this->setBride(new $class($configuration->getParameters()));
 	}
 
